@@ -1,0 +1,25 @@
+body {
+  background-color: whitesmoke;
+  color:darkviolet;
+}
+#response {
+  color: green;
+}
+#error {
+  color: deeppink;
+}
+div {
+  padding: 10px;
+}
+form {
+  display: table;
+}
+p {
+  display: table-row;
+}
+label {
+  display: table-cell;
+}
+input {
+  display: table-cell;
+}

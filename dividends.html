@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dividends</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/dividends.js"></script>
+  </head>
+
+  <body>
+    <form id="dividendsForm">
+      <h3>YEARLY DIVIDENDS CALCULATOR</h3>
+      <hr />
+      <div class="class-div-3">
+        <p id="response"></p>
+        <p id="error"></p>
+      </div>
+      <div>
+        <label for="starting-deposit">Starting deposit</label>
+        <input type="number" id="starting-deposit" />
+      </div>
+
+      <div>
+        <label for="monthly-deposit">Monthly Contribution</label>
+        <input type="number" id="monthly-deposit" />
+      </div>
+
+      <div>
+        <label for="deposits-interest">Interest Rate %</label>
+        <input type="number" id="deposits-interest" />
+      </div>
+
+      <div>
+        <button
+          type="button"
+          onclick="calculateDepositDividends(document.getElementById('starting-deposit').value, document.getElementById('monthly-deposit').value, document.getElementById('deposits-interest').value)"
+        >
+          CALCULATE
+        </button>
+      </div>
+      <hr />
+    </form>
+  </body>
+</html>
