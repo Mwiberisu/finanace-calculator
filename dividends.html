@@ -32,9 +32,14 @@
       </div>
 
       <div>
+        <label for="withholding-tax">Withholding Tax %</label>
+        <input type="number" id="withholding-tax" />
+      </div>
+
+      <div>
         <button
           type="button"
-          onclick="calculateDepositDividends(document.getElementById('starting-deposit').value, document.getElementById('monthly-deposit').value, document.getElementById('deposits-interest').value)"
+          onclick="calculateDepositDividends(document.getElementById('starting-deposit').value, document.getElementById('monthly-deposit').value, document.getElementById('deposits-interest').value, document.getElementById('withholding-tax').value)"
         >
           CALCULATE
         </button>
