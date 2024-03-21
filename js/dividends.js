@@ -27,15 +27,15 @@ function calculateDepositDividends(
 
       response =
         "Dividends on deposits: " +
-        startingDepositDividends +
+        startingDepositDividends.toLocaleString() +
         "</br>Dividends earned withing the year: " +
-        yearDividends +
+        yearDividends.toLocaleString() +
         "</br>Total Dividends: " +
-        totalDividends +
+        totalDividends.toLocaleString() +
         "</br>Total Tax: " +
-        totalTax +
+        totalTax.toLocaleString() +
         "</br>Total earnings after tax: " +
-        dividendsAfterTax;
+        dividendsAfterTax.toLocaleString();
     }
   } catch (err) {
     error = err;
@@ -76,11 +76,11 @@ function getDaysEquivalentSavingsValue() {
     "Day " + todayValue + " of " + yearlyDays;
 
   document.getElementById("expectedSavings").innerHTML =
-    "Today's expected savings:  " + todayValue;
+    "Today's expected savings:  " + todayValue.toLocaleString();
   document.getElementById("savingsToDate").innerHTML =
-    "Total savings to date:  " + savingsValue;
+    "Total savings to date:  " + savingsValue.toLocaleString();
   document.getElementById("ExpectedSavingForTheYear").innerHTML =
-    "Total expected savings for the year:  " + yearlySavings;
+    "Total expected savings for the year:  " + yearlySavings.toLocaleString();
 }
 function getDayNumber() {
   const today = new Date();
@@ -117,9 +117,9 @@ function a100PerDaySavingsPlan() {
   document.getElementById("expectedSavings100").innerHTML =
     "Today's expected savings:  " + dailySavings;
   document.getElementById("savingsToDate100").innerHTML =
-    "Total savings to date:  " + savingsToDate;
+    "Total savings to date:  " + savingsToDate.toLocaleString();
   document.getElementById("ExpectedSavingForTheYear100").innerHTML =
-    "Total expected savings for the year:  " + yearlySavings;
+    "Total expected savings for the year:  " + yearlySavings.toLocaleString();
 }
 
 function start() {

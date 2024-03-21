@@ -1,6 +1,6 @@
 body {
-  background-color: whitesmoke;
-  color:darkviolet;
+  background-color: #f0ffff;
+  color: darkviolet;
 }
 #response {
   color: green;
@@ -14,12 +14,30 @@ div {
 form {
   display: table;
 }
+
 p {
-  display: table-row;
+  margin: 20px;
 }
 label {
   display: table-cell;
 }
 input {
   display: table-cell;
+}
+.div-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  text-align: justify;
+}
+.a100Savings {
+  background-color: lightblue;
+}
+
+.dailyEquivalentSavings {
+  background-color: pink;
+}
+
+.saccoDividends {
+  background-color: bisque;
 }
