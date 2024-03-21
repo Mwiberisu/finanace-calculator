@@ -8,43 +8,61 @@
     <script src="js/dividends.js"></script>
   </head>
 
-  <body>
-    <form id="dividendsForm">
-      <h3>YEARLY DIVIDENDS CALCULATOR</h3>
-      <hr />
-      <div class="class-div-3">
-        <p id="response"></p>
-        <p id="error"></p>
-      </div>
-      <div>
-        <label for="starting-deposit">Starting deposit</label>
-        <input type="number" id="starting-deposit" />
-      </div>
+  <body onload="start()">
+    <div>
+      <form id="dividendsForm">
+        <h3>YEARLY DIVIDENDS CALCULATOR</h3>
+        <hr />
+        <div class="class-div-3">
+          <p id="response"></p>
+          <p id="error"></p>
+        </div>
+        <div>
+          <label for="starting-deposit">Starting deposit</label>
+          <input type="number" id="starting-deposit" />
+        </div>
 
-      <div>
-        <label for="monthly-deposit">Monthly Contribution</label>
-        <input type="number" id="monthly-deposit" />
-      </div>
+        <div>
+          <label for="monthly-deposit">Monthly Contribution</label>
+          <input type="number" id="monthly-deposit" />
+        </div>
 
-      <div>
-        <label for="deposits-interest">Interest Rate %</label>
-        <input type="number" id="deposits-interest" />
-      </div>
+        <div>
+          <label for="deposits-interest">Interest Rate %</label>
+          <input type="number" id="deposits-interest" />
+        </div>
 
-      <div>
-        <label for="withholding-tax">Withholding Tax %</label>
-        <input type="number" id="withholding-tax" />
-      </div>
+        <div>
+          <label for="withholding-tax">Withholding Tax %</label>
+          <input type="number" id="withholding-tax" />
+        </div>
 
-      <div>
-        <button
-          type="button"
-          onclick="calculateDepositDividends(document.getElementById('starting-deposit').value, document.getElementById('monthly-deposit').value, document.getElementById('deposits-interest').value, document.getElementById('withholding-tax').value)"
-        >
-          CALCULATE
-        </button>
-      </div>
-      <hr />
-    </form>
+        <div>
+          <button
+            type="button"
+            onclick="calculateDepositDividends(document.getElementById('starting-deposit').value, document.getElementById('monthly-deposit').value, document.getElementById('deposits-interest').value, document.getElementById('withholding-tax').value)"
+          >
+            CALCULATE
+          </button>
+        </div>
+        <hr />
+      </form>
+    </div>
+    <div>
+      <h3>DAY'S EQUIVALENT SAVINGS PLAN</h3>
+      <p id="year"></p>
+      <p id="dayValue"></p>
+      <p id="expectedSavings"></p>
+      <p id="savingsToDate"></p>
+      <p id="ExpectedSavingForTheYear"></p>
+    </div>
+    <div>
+      <h3>A 100 PER DAY SAVINGS PLAN</h3>
+      <p id="year100"></p>
+      <p id="dayValue100"></p>
+      <p id="expectedSavings100"></p>
+      <p id="savingsToDate100"></p>
+      <p id="ExpectedSavingForTheYear100"></p>
+    </div>
   </body>
 </html>

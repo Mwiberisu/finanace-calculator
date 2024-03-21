@@ -42,9 +42,6 @@ function calculateDepositDividends(
     console.log(err);
   }
 
-  console.log(response);
-  console.log(error);
-
   if (!error) {
     document.getElementById("response").innerHTML = response + happyEmoji;
 
@@ -63,4 +60,77 @@ function getDividendsPerYear(monthlyDeposit, interestRate) {
   return interest;
 }
 
-console.log(getDividendsPerYear(50000, 10));
+function getDaysEquivalentSavingsValue() {
+  let todayValue = getDayNumber();
+  let savingsValue = getSavingsValue(todayValue);
+  let today = new Date();
+  let yearlyDays = 365;
+  if (today.getFullYear() % 4 === 0) {
+    yearlyDays = 366;
+  }
+  let yearlySavings = getSavingsValue(yearlyDays);
+
+  //set the data
+  document.getElementById("year").innerHTML = "YEAR " + today.getFullYear();
+  document.getElementById("dayValue").innerHTML =
+    "Day " + todayValue + " of " + yearlyDays;
+
+  document.getElementById("expectedSavings").innerHTML =
+    "Today's expected savings:  " + todayValue;
+  document.getElementById("savingsToDate").innerHTML =
+    "Total savings to date:  " + savingsValue;
+  document.getElementById("ExpectedSavingForTheYear").innerHTML =
+    "Total expected savings for the year:  " + yearlySavings;
+}
+function getDayNumber() {
+  const today = new Date();
+
+  let firstJan = new Date();
+  firstJan.setMonth(0); //jan
+  firstJan.setDate(1); //first
+
+  let oneDay = 1000 * 3600 * 24;
+  const todayValue =
+    Math.round((today.getTime() - firstJan.getTime()) / oneDay) + 1;
+
+  return todayValue;
+}
+
+function getSavingsValue(todayValue) {
+  let savingsValue = 0;
+  for (let i = 1; i <= todayValue; i++) {
+    savingsValue = savingsValue + i; //sum the numbers
+  }
+  return savingsValue;
+}
+
+function a100PerDaySavingsPlan() {
+  const todayValue = getDayNumber();
+  const dailySavings = 100;
+  const savingsToDate = todayValue * dailySavings;
+  const today = new Date();
+  const yearlySavings = getNoOfDaysInYear() * dailySavings;
+
+  //set the data
+  document.getElementById("year100").innerHTML = "YEAR " + today.getFullYear();
+
+  document.getElementById("expectedSavings100").innerHTML =
+    "Today's expected savings:  " + dailySavings;
+  document.getElementById("savingsToDate100").innerHTML =
+    "Total savings to date:  " + savingsToDate;
+  document.getElementById("ExpectedSavingForTheYear100").innerHTML =
+    "Total expected savings for the year:  " + yearlySavings;
+}
+
+function start() {
+  getDaysEquivalentSavingsValue();
+  a100PerDaySavingsPlan();
+}
+function getNoOfDaysInYear() {
+  const today = new Date();
+  let yearlyDays = 365;
+  if (today.getFullYear() % 4 === 0) {
+    yearlyDays = 366;
+  }
+  return yearlyDays;
+}
