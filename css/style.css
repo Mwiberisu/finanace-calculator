@@ -1,5 +1,5 @@
 body {
-  background-color: #f0ffff;
+  background-color: whitesmoke;
   color: darkviolet;
 }
 #response {
@@ -40,4 +40,7 @@ input {
 
 .saccoDividends {
   background-color: bisque;
+}
+.insurance {
+  background-color: lightyellow;
 }

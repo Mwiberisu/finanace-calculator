@@ -134,3 +134,5 @@ function getNoOfDaysInYear() {
   }
   return yearlyDays;
 }
+
+function getInsuranceNarration() {}
